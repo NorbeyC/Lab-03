@@ -1,0 +1,11 @@
+
+
+ 1. Estar muerto		  alive = false
+ 
+ 2. Ser menor de edad     0<age<18 ^ alive = true
+ 
+ 3. Edad invalida		  age<0 ^ age>125 ^ alive = true
+ 
+ 4. Ya resgistrado		  exist id ^ alive = true
+ 
+ 5. Valido				  18<=age<=125 ^ alive=true ^ ¬(exist id)
