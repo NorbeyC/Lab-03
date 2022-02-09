@@ -11,7 +11,7 @@ public class RegistryTest {
     @Test
     public void validateRegistryResult() {
 
-        Person person = new Person();
+        Person person = new Person("Norbeycito", 100280043, 21, Gender.MALE, true);
 
         RegisterResult result = registry.registerVoter(person);
 

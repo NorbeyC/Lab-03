@@ -1,0 +1,31 @@
+Número						Clase Equivalencia																Casos de prueba				Resultado
+
+
+	1.	tarifaBase invalida									tarifaBase<0									-3000    -1    -800			INVALID_TAR
+
+	2.	edad invalida										edad<0 ^ edad>125	&& tarifaBase>0				234		-15		-9			INVALID_AGE
+
+	3.	dias de anticipación invalidos 						diasAntelacion<0	&& tarifaBase>0				-4		-65		-8			INVALID_DA
+
+	4.	15%: Billete comprado más de 20 días antes 			diasAntelacion>20	&& tarifaBase>0				23		45		51			DESC_15%			
+
+	5.	5%: Pasajero menor de edad							0<=edad<18	&& tarifaBase>0						1		4		15			DES_5%
+
+	6.	8%: pasajeros mayores de 65 años					65<age<=125	&& tarifaBase>0						68		76		90			DES_8%
+
+	7.	%normal: Billete comprado con almenos de 20 días 
+		de anticipacion y pasajeros entre 19 y 65 años		diasAntelacion<=20 ^ 18<=edad<=65	 && tarifaBase>0			
+
+
+
+CONDICIONES LIMITE:
+			tarifaBase invalida		0
+			edad invalida			-1  126
+			anticipacion invalida	-1
+			15%: 					21
+			5%:						0   17
+			8%:						66  125
+			normal					diasA:0,20 edad:18,65 tarifa:1
+
+
+

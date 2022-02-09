@@ -9,10 +9,10 @@ public class Registry {
     	if(p.isAlive()==false) {
     		return RegisterResult.DEAD;
     	}
-    	if(p.getAge()<18 && p.isAlive()==true) {
+    	if(p.getAge()<18 && p.getAge()>0 && p.isAlive()==true) {
     		return RegisterResult.UNDERAGE;
     	}
-    	if(p.getAge()>125 && p.getAge()<0 && p.isAlive()==true) {
+    	if((p.getAge()>125 || p.getAge()<=0) && p.isAlive()==true) {
     		return RegisterResult.INVALID_AGE;
     	}
     	if(ids.contains(p.getId()) && p.isAlive()==true){
